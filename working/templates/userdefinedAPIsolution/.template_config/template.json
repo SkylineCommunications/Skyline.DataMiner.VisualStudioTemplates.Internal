@@ -7,10 +7,10 @@
 	"type": "solution",
 	"editorTreatAs":"solution"
   },
-  "identity": "Skyline.DataMiner.AutomationScript.Solution.Template",
-  "name": "DataMiner Automation Script Solution",
-  "shortName": "dataminer-automation-solution",
-  "sourceName": "SkylineDataMinerAutomationScriptSolutionTemplate",
+  "identity": "Skyline.DataMiner.UserDefinedApi.AutomationScript.Solution.Template",
+  "name": "DataMiner User-defined APIs automation Script Solution",
+  "shortName": "dataminer-user-defined-api-automation-solution",
+  "sourceName": "SkylineDataMinerUserDefinedApiAutomationScriptSolutionTemplate",
   "symbols": {
     "ScriptName": {
         "type": "parameter",
