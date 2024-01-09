@@ -68,7 +68,15 @@ namespace $NAMESPACE$_1
 		[AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
 		public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
 		{
-	
+			var method = requestData.RequestMethod;
+			var route = requestData.Route;
+			var body = requestData.RawBody;
+
+			return new ApiTriggerOutput
+			{
+				ResponseBody = $"Received {method} request for route: '{route}' with body: '{body}'",
+				ResponseCode = (int)StatusCode.Ok,
+			};
 		}
 	}
 }
