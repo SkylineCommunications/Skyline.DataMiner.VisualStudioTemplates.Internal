@@ -16,7 +16,7 @@ Template that creates a new Automation script Visual Studio solution.
 
 ### User-defined APIs automation script solution
 
-Template that creates a new User-defined API automation script Visual Studio solution.
+Template that creates a new User-Defined API Automation script Visual Studio solution.
 
 ### NuGet solution
 
