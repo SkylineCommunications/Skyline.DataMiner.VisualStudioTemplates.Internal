@@ -64,7 +64,7 @@ namespace $NAMESPACE$_1
 		/// The API trigger.
 		/// </summary>
 		/// <param name="engine">Link with SLAutomation process.</param>
-		/// <param name="requestData">Hold the API request data.</param>
+		/// <param name="requestData">Holds the API request data.</param>
 		/// <returns>An object with the script API output data.</returns>
 		[AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
 		public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
