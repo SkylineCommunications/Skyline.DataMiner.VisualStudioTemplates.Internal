@@ -10,7 +10,7 @@
   "identity": "Skyline.DataMiner.UserDefinedApi.Solution.Template",
   "name": "DataMiner User-Defined API Solution",
   "shortName": "dataminer-user-defined-api-solution",
-  "sourceName": "SkylineDataMinerUserDefinedApiAutomationScriptSolutionTemplate",
+  "sourceName": "SkylineDataMinerUserDefinedApiSolutionTemplate",
   "symbols": {
     "ScriptName": {
         "type": "parameter",
