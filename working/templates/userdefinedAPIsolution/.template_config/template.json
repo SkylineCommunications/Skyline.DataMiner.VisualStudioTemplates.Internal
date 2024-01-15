@@ -8,7 +8,7 @@
 	"editorTreatAs":"solution"
   },
   "identity": "Skyline.DataMiner.UserDefinedApi.Solution.Template",
-  "name": "DataMiner User-Defined APIs Automation Script Solution",
+  "name": "DataMiner User-Defined API Solution",
   "shortName": "dataminer-user-defined-api-automation-solution",
   "sourceName": "SkylineDataMinerUserDefinedApiAutomationScriptSolutionTemplate",
   "symbols": {
