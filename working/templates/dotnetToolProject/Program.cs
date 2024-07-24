@@ -51,7 +51,7 @@
             return await rootCommand.InvokeAsync(args);
         }
 
-        private static async Task<int> Process(string exampleArgument)
+        private static async Task<int> Process(bool isDebug, string exampleArgument)
         {
             try
             {
