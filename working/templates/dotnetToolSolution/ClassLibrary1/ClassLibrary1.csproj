@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<PackAsTool>true</PackAsTool>
 		<ToolCommandName>$ToolCommandName$</ToolCommandName>
 		<ImplicitUsings>disable</ImplicitUsings>
@@ -31,7 +31,7 @@
 		<None Include="nuget\Icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Skyline.DataMiner.CICD.FileSystem" Version="1.0.3" />
+		<PackageReference Include="Skyline.DataMiner.CICD.FileSystem" Version="1.0.6" />
 		<PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
 	</ItemGroup>
 </Project>
