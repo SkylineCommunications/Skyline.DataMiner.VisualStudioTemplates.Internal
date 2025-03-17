@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Skyline Communications",
+  "classifications": [
+    "DataMiner",
+    "SLNet",
+    "RepositoryApi"
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "identity": "Skyline.DataMiner.SLNetTypes.RepositoryApi",
+  "name": "DataMiner SLNetTypes RepositoryApi",
+  "shortName": "dataminer-slnettypes-repositoryapi",
+  "sourceName": "$SCRIPTNAME$",
+  "symbols": {
+    "TableName": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "NewTable",
+      "replaces": "$TABLENAME$",
+      "fileRename":"$TABLENAME$",
+      "description": "The table name."
+    },
+    "tableNameLower":{
+      "type": "generated",
+      "generator": "casing",
+      "replaces": "$TABLENAMELOWER$",
+      "parameters": {
+        "source":"TableName",
+        "toLower": true
+      }
+    }
+  },
+  "sources": [
+    {
+      "exclude": [
+        "./[Content_Types].xml",
+        "src/.vs/**",
+        ".template_config/**",
+        "[Content_Types].xml",
+        "_rels/**",
+        "*.nuspec",
+        "*.nupkg"
+      ]
+    }]
+}
