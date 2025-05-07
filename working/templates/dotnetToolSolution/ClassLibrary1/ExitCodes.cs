@@ -1,4 +1,4 @@
-﻿namespace $PackageId$.NAME
+﻿namespace $PackageId$
 {
     internal enum ExitCodes
     {

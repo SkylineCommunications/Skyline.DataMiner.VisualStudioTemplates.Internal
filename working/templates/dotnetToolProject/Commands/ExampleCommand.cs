@@ -9,25 +9,39 @@ namespace $PackageId$.Commands
         {
             AddOption(new Option<IFileInfoIO>(
                 aliases: ["--example-package-file", "-epf"],
-                description: "The path to the example package file that is mandatory and needs to exist.")
+                description: "The path to the example package file that is mandatory and needs to exist.",
+                parseArgument: OptionHelper.ParseFileInfo!)
             {
                 IsRequired = true
             }.LegalFilePathsOnly()!.ExistingOnly());
 
             AddOption(new Option<IDirectoryInfoIO?>(
                 aliases: ["--example-output-directory", "-eod"],
-                description: "The directory path for the output which is optional.")
+                description: "The directory path for the output which is optional.",
+                parseArgument: OptionHelper.ParseDirectoryInfo)
             {
                 IsRequired = false
             }.LegalFilePathsOnly());
+
+            AddOption(new Option<bool?>(
+                aliases: ["--show-extra-message", "-sem"],
+                description: "When provided, it will show an additional message."));
         }
     }
     
     internal class ExampleCommandHandler(ILogger<ExampleCommandHandler> logger, IConfiguration configuration) : ICommandHandler
     {
+        /*
+         * Automatic binding with System.CommandLine.NamingConventionBinder
+         * The property names need to match with the command line argument names.
+         * Example: --example-package-file will bind to ExamplePackageFile
+         */
+
         public required IFileInfoIO ExamplePackageFile { get; set; }
 
         public IDirectoryInfoIO? ExampleOutputDirectory { get; set; }
+
+        public bool? ShowExtraMessage { get; set; }
 
         public int Invoke(InvocationContext context)
         {
@@ -47,16 +61,22 @@ namespace $PackageId$.Commands
                 // Create output directory if exists
                 ExampleOutputDirectory?.Create();
 
-                if (ExamplePackageFile.Length == 0)
+                // Readout file if not too large
+                if (ExamplePackageFile.Length < 10000)
                 {
-                    // If it needs to fail
-                    return (int)ExitCodes.Fail;
+                    using StreamReader sr = ExamplePackageFile.OpenText();
+                    string fileContent = await sr.ReadToEndAsync(context.GetCancellationToken());
+                    logger.LogInformation("Full file:{newLine}{content}", Environment.NewLine, fileContent);
+                }
+                else
+                {
+                    logger.LogWarning("File is too large to read out for this example command. Size: {size}", ExamplePackageFile.Length);
                 }
 
-                // Readout file
-                await using FileStream fileStream = ExamplePackageFile.OpenRead();
-
-                logger.LogInformation("Informational message that by default will be shown.");
+                if (ShowExtraMessage is true)
+                {
+                    logger.LogInformation("Extra informational message that will be shown.");
+                }
 
                 return (int)ExitCodes.Ok;
             }
