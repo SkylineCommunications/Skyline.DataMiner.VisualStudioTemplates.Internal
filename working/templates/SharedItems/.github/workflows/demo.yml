@@ -3,7 +3,7 @@
 # A stable release can be done by creating a tag or a GitHub Release.
 
 
-name: Basic Workflow
+name: Demo Workflow
 
 on:
   push:
