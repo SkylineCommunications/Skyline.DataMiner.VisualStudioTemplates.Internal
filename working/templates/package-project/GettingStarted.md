@@ -208,7 +208,7 @@ With this setup, any push with new content (including the initial creation) to t
 > [!NOTE]
 > The description will be visible in the DataMiner Catalog.
 
-<!--#elseif (IsCatalogBuildCICD)-->
+<!--#elseif (IsBuildCICD)-->
 ## Build CI/CD workflow
 
 This project includes a simple build GitHub workflow that builds and tests your solution without publishing to the Catalog.

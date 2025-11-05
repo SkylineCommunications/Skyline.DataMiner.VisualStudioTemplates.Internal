@@ -96,9 +96,9 @@
       "type": "computed",
       "value": "(CreateDataMinerPackage) && IncludeGitHubWorkflow == Demo"
     },
-    "IsCatalogBuildCICD": {
+    "IsBuildCICD": {
       "type": "computed",
-      "value": "(CreateDataMinerPackage) && IncludeGitHubWorkflow == Build"
+      "value": "IncludeGitHubWorkflow == Build"
     }
   },
   "forms": {
