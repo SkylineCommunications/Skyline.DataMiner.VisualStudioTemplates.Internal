@@ -1,10 +1,8 @@
 # This is a simple build workflow that builds and tests the solution.
 # It does not publish to the catalog. Use the Demo or Complete workflow if you need catalog publishing.
 
-
 name: Build Solution
 
-# Allows you to run this workflow manually from the Actions tab
 on:
   push:
     branches: [ "master", "main" ]
@@ -13,6 +11,7 @@ on:
       - "[0-9]+.[0-9]+.[0-9]+.[0-9]+-**"
       - "[0-9]+.[0-9]+.[0-9]+"
       - "[0-9]+.[0-9]+.[0-9]+-**"
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:

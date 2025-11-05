@@ -2,7 +2,6 @@
 # Important: Every change to the master or main branch will upload a new package to the Catalog using a new prerelease version.
 # A stable release can be done by creating a tag or a GitHub Release.
 
-
 name: Demo Workflow
 
 on:
