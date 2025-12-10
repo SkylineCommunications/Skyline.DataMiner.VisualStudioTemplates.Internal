@@ -145,11 +145,6 @@
       "condition": "!(HostIdentifier == dotnetcli) && !(HostIdentifier == dis) && !PlaceSolutionFilesHigh"
     },
     {
-      "source": "../SharedItems/CatalogInformation",
-      "target": "CatalogInformation",
-      "condition": "CreateDataMinerPackage"
-    },
-    {
       "source": "../SharedItems/Properties",
       "target": "Properties",
       "condition": "CreateDataMinerPackage"
