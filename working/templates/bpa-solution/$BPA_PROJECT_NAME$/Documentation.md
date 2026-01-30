@@ -3,7 +3,7 @@
 ## Best Practice
 
 *Describe which best practice is being checked by the BPA*
-*For more information refer to* [https://aka.dataminer.services/BPADocumentation](Documenting a BPA).
+*For more information refer to* [Documenting a BPA](https://aka.dataminer.services/BPADocumentation).
 *A pull request on the Docs repository should then be created and an AKA link to that page must be created.
 
 ## Meta data
