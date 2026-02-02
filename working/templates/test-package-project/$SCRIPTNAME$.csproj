@@ -17,7 +17,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller" Version="3.1.1" />
+		<PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller" Version="3.2.0" />
 		<PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.3.0.25" />
 		<PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="2.2.1">
 			<PrivateAssets>all</PrivateAssets>
@@ -27,19 +27,13 @@
 
 	<ItemGroup>
 		<Compile Remove="TestPackageContent\Dependencies\**" />
+		<Compile Remove="TestPackageContent\TestHarvesting\**" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Content Include="TestPackageContent\Dependencies\**">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-		<Compile Remove="TestPackageContent\TestHarvesting\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Content Include="TestPackageContent\TestHarvesting\**">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
