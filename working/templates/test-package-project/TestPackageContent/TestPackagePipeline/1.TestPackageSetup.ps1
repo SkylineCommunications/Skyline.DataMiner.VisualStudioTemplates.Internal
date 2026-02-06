@@ -1,9 +1,9 @@
-﻿$ErrorActionPreference = 'Stop'
-
-param (
+﻿param (
     [Parameter(Mandatory = $true)]
     [string]$PathToTestPackageContent
 )
+
+$ErrorActionPreference = 'Stop'
 
 # Import common code module
 Import-Module -Name (Join-Path $PSScriptRoot 'CommonCode.psm1')
