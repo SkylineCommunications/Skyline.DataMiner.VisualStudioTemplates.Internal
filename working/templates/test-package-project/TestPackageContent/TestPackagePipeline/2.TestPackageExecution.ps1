@@ -1,4 +1,6 @@
-﻿param (
+﻿$ErrorActionPreference = 'Stop'
+
+param (
     [Parameter(Mandatory = $true)]
     [string]$PathToTestPackageContent
 )
