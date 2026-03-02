@@ -25,19 +25,17 @@
 		// - RunMode (e.g. Cluster)
 		// - DefaultSchedule (BPA test will run every x time)
 
-#if (!IsCorrectiveBpa)
 		/// <summary>
 		/// This is the main entry point of the test.
 		/// When the test is run this function will be called.
-		/// </summary>
-		public override ABpaTestResult Run(BpaExecuteContext context)
-#endif
 #if (IsCorrectiveBpa)
-		/// <summary>
-		/// This function is used to check if the test succeeds or fail
-		/// This function will be called first. The result is then used to decide if <see cref="CorrectiveAction"/> will be called.
+		/// The result is then used to decide if <see cref="CorrectiveAction"/> will be called.
+#endif
 		/// </summary>
+#if (IsCorrectiveBpa)
 		protected override ABpaTestResult Verify(BpaExecuteContext context)
+#else
+		public override ABpaTestResult Run(BpaExecuteContext context)
 #endif
 		{
 			// Your test code goes here.
