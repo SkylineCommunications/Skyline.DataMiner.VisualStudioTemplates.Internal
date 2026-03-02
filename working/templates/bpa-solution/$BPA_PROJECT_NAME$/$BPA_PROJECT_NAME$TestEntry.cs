@@ -1,5 +1,6 @@
 ﻿namespace $CLASS_NAME_PLACEHOLDER$Bpa
 {
+	using System;
 	using Skyline.DataMiner.BpaLib;
 
 	/// <summary>
@@ -32,6 +33,8 @@
 		/// The result is then used to decide if <see cref="CorrectiveAction"/> will be called.
 #endif
 		/// </summary>
+		/// <param name="context">The execution context .</param>
+		/// <returns>The result of the test execution.</returns>
 #if (IsCorrectiveBpa)
 		protected override ABpaTestResult Verify(BpaExecuteContext context)
 #else
@@ -66,6 +69,8 @@
 		/// <summary>
 		/// This function will be called if the verify function fails and the BPA is allowed to perform corrective actions
 		/// </summary>
+		/// <param name="context">The execution context .</param>
+		/// <returns>Indication of whether the corrective action succeeded.</returns>
 		protected override bool CorrectiveAction(BpaExecuteContext context)
 		{
 			// Your code for correcting the issue goes here.

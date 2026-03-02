@@ -37,12 +37,6 @@
       "valueTransform": "invalidChars",
       "replaces": "$CLASS_NAME_PLACEHOLDER$"
     },
-    "SafeProjectName": {
-      "type": "derived",
-      "valueSource": "name",
-      "valueTransform": "invalidChars",
-      "replaces": "$SAFE_PROJECT_NAME$"
-    }
   },
     "forms":
 	{
@@ -52,9 +46,6 @@
       "replacement": ""
     }
   },
-  "guids": [
-    "1F2B2B24-15BE-4DE0-99F7-6531694672FB"
-  ],
   "sources": [
     {
       "modifiers": [
@@ -64,22 +55,4 @@
       ]
     }
   ],
-  "primaryOutputs": [
-    {
-      "condition": "(HostIdentifier != \"dotnetcli\")",
-      "path": "protocol.xml"
-    }
-  ],
-  "postActions": [
-    {
-      "condition": "(HostIdentifier != \"dotnetcli\")",
-      "description": "Opens the BPA source file in the editor",
-      "manualInstructions": [],
-      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
-      "args": {
-        "files": "0"
-      },
-      "continueOnError": true
-    }
-  ]
 }
