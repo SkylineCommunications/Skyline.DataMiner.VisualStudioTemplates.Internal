@@ -22,7 +22,7 @@
     "Author": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "",
+      "defaultValue": "Skyline Communications",
       "replaces": "$BPA_AUTHOR$",
       "description": "The author of the BPA."
     },
