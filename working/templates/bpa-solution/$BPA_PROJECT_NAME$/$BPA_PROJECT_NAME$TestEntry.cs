@@ -5,11 +5,10 @@
 	/// <summary>
 	/// $BPA_DESCRIPTION$
 	/// </summary>
-#if (!IsCorrectiveBpa)
-	public class $CLASS_NAME_PLACEHOLDER$TestEntry : ABpaTest
-#endif
 #if (IsCorrectiveBpa)
 	public class $CLASS_NAME_PLACEHOLDER$TestEntry : ABpaCorrectiveTest
+#else
+	public class $CLASS_NAME_PLACEHOLDER$TestEntry : ABpaTest
 #endif
 	{
 		public override string Name => "$BPA_PROJECT_NAME$";
@@ -45,22 +44,21 @@
 			// For more information on how to implement a BPA, refer to https://aka.dataminer.services/BPADev.
 			// For more information on how to run a BPA in the standalone executor, refer to https://aka.dataminer.services/BPAStandaloneExecutor.
 
-			return new $CLASS_NAME_PLACEHOLDER$Result()
+			return new $CLASS_NAME_PLACEHOLDER$Result
 			{
-				// at the very least, provide an outcome and a result message
+				// At the very least, provide an outcome and a result message
 				Outcome = BpaTestOutcome.NoIssues,
 				ResultMessage = "No issues detected",
 
-				// for issues, it is advised to provide and impact and
-				// info on corrective actions in the result
-				Impact = string.Empty,
-				CorrectiveAction = string.Empty,
+				// For issues, it is advised to provide an impact and info on corrective actions in the result
+				Impact = String.Empty,
+				CorrectiveAction = String.Empty,
 
 				// A JSON serializable object can be provided with further details.
-				// - In it's simplest format, this is a string.
-				// - A list of string can be provided through
+				// - In its simplest format, this is a string.
+				// - A list of string can be provided through:
 				//      BpaResultHelper.BuildStringListDetails(string[])
-				// - a custom JSON object tree can also be provided.
+				// - A custom JSON object tree can also be provided.
 				// See the examples in BpaTests/Examples for more info
 				DetailedJsonResult = "Detailed results",
 			};

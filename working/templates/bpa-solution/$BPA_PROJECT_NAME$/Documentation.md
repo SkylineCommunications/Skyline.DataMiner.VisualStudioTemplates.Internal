@@ -4,15 +4,15 @@
 
 *Describe which best practice is being checked by the BPA*
 *For more information refer to* [Documenting a BPA](https://aka.dataminer.services/BPADocumentation).
-*A pull request on the Docs repository should then be created and an AKA link to that page must be created.
+*A pull request on the Docs repository should then be created and an [AKA link](http://aka.dataminer.services/admin) to that page must be created.
 
 ## Meta data
 
-* Name: $BPA_PROJECT_NAME$
-* Description: "$BPA_DESCRIPTION$"
-* Author: Skyline Communications
-* Default schedule: *e.g. once a day*
-* Min DataMiner Version: *if the test requires a minimal DMA version, list it here*
+- Name: $BPA_PROJECT_NAME$
+- Description: "$BPA_DESCRIPTION$"
+- Author: Skyline Communications
+- Default schedule: *e.g. once a day*
+- Min DataMiner Version: *if the test requires a minimal DMA version, list it here*
 
 ## Results
 
@@ -20,7 +20,7 @@
 
 ### Success
 
-* "*example output message*\*
+- "*example output message*\*
 
 *Example description of the message*
 
@@ -38,8 +38,8 @@
 
 ## Impact when issues detected
 
-* Impact: "*impact info as provided in the BPA result*"
-* Corrective Action: "*corrective action info as provided in the BPA result*"
+- Impact: "*impact info as provided in the BPA result*"
+- Corrective Action: "*corrective action info as provided in the BPA result*"
 
 ## More sections
 
