@@ -3,7 +3,7 @@
 	using Skyline.DataMiner.BpaLib;
 
 	/// <summary>
-	/// This class is used to report the result back to the test framework
+	/// This class is used to report the result back to the test framework.
 	/// </summary>
 	public sealed class $CLASS_NAME_PLACEHOLDER$Result : ABpaTestResult
 	{

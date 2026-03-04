@@ -3,8 +3,8 @@
 ## Best Practice
 
 *Describe which best practice is being checked by the BPA*
-*For more information refer to* [Documenting a BPA](https://aka.dataminer.services/BPADocumentation).
-*A pull request on the Docs repository should then be created and an [AKA link](http://aka.dataminer.services/admin) to that page must be created.
+*For more information refer to* [Documenting a BPA](https://aka.dataminer.services/BPADocumentation).*
+*A pull request on the Docs repository should then be created and an [AKA link](http://aka.dataminer.services/admin) to that page must be created.*
 
 ## Meta data
 
@@ -16,7 +16,7 @@
 
 ## Results
 
-*in this section, list the different possible BPA result codes and messages*
+*In this section, list the different possible BPA result codes and messages*
 
 ### Success
 

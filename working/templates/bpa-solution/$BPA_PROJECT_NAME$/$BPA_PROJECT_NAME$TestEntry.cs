@@ -33,7 +33,7 @@
 		/// The result is then used to decide if <see cref="CorrectiveAction"/> will be called.
 #endif
 		/// </summary>
-		/// <param name="context">The execution context .</param>
+		/// <param name="context">The execution context.</param>
 		/// <returns>The result of the test execution.</returns>
 #if (IsCorrectiveBpa)
 		protected override ABpaTestResult Verify(BpaExecuteContext context)
@@ -69,7 +69,7 @@
 		/// <summary>
 		/// This function will be called if the verify function fails and the BPA is allowed to perform corrective actions
 		/// </summary>
-		/// <param name="context">The execution context .</param>
+		/// <param name="context">The execution context.</param>
 		/// <returns>Indication of whether the corrective action succeeded.</returns>
 		protected override bool CorrectiveAction(BpaExecuteContext context)
 		{
