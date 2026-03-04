@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Skyline Communications",
+  "classifications": [ "DataMiner" ],
+  "tags": {
+	"language": "C#",
+	"type": "solution",
+	"editorTreatAs":"solution"
+  },
+  "identity": "Skyline.DataMiner.Bpa.Solution.Template",
+  "name": "DataMiner BPA Solution",
+  "shortName": "dataminer-bpa-solution",
+  "sourceName": "$BPA_PROJECT_NAME$",
+  "symbols": {
+    "BpaDescription": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "",
+      "replaces": "$BPA_DESCRIPTION$",
+      "description": "A short description of the BPA."
+    },
+    "Author": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Skyline Communications",
+      "replaces": "$BPA_AUTHOR$",
+      "description": "The author of the BPA."
+    },
+    "IsCorrectiveBpa": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "This BPA has a corrective action."
+    },
+    "SafeClassName": {
+      "type": "derived",
+      "valueSource": "name",
+      "valueTransform": "invalidChars",
+      "replaces": "$CLASS_NAME_PLACEHOLDER$"
+    },
+  },
+    "forms":
+	{
+    "invalidChars": {
+      "identifier": "replace",
+      "pattern": "([\\-_\\.\\ ])",
+      "replacement": ""
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [ "./[Content_Types].xml", "src/.vs/**", ".template_config/**", "[Content_Types].xml", "_rels/**", "*.nuspec", "*.nupkg" ]
+        }
+      ]
+    }
+  ],
+}
