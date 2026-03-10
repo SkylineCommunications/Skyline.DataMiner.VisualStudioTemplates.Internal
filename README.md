@@ -10,13 +10,25 @@ The following section lists the currently available Visual Studio templates.
 
 Template that creates a new connector Visual Studio solution.
 
-### Automation script solution
+### Automation Script project
 
-Template that creates a new Automation script Visual Studio solution.
+Visual Studio template that creates a new DataMiner Automation Script project.
 
-### User-defined APIs solution
+### Automation Script Library project
 
-Template that creates a new User-Defined API Visual Studio solution.
+Visual Studio template that creates a new DataMiner Automation Script library project.
+
+### BPA solution
+
+Visual Studio template that creates a new DataMiner Best Practices Analyzer (BPA) solution.
+
+### DataMiner Extension Module solution
+
+Visual Studio template that creates a new DataMiner Extension Module (DxM) solution.
+
+### Ad Hoc Data Source project
+
+Visual Studio template that creates a new DataMiner GQI ad hoc data source project.
 
 ### NuGet solution
 
@@ -33,6 +45,18 @@ Visual Studio template that creates a Solution containing pre-filled meta-data t
 ### .NET Tool project
 
 Visual Studio template that creates a Project containing pre-filled meta-data to handle .NET Tool creation.
+
+### Package project
+
+Visual Studio template that creates a new DataMiner package project.
+
+### Test Package project
+
+Visual Studio template that creates a new DataMiner test package project.
+
+### User-Defined API project
+
+Visual Studio template that creates a new DataMiner User-Defined API project.
 
 ## How to install
 
@@ -55,9 +79,9 @@ As of version 2.42, DataMiner Integration Studio (DIS) automatically installs th
 
 ### Using the CLI
 
-1. Choose a project template i.e. `dataminer-srmfunction-solution`.
-2. Run `dotnet new dataminer-srmfunction-solution --help` to see the available options.
-3. Run `dotnet new dataminer-srmfunction-solution ' with the required options along with any other options to create a solution from the template.
+1. Choose a project template i.e. `dataminer-connector-solution`.
+2. Run `dotnet new dataminer-connector-solution --help` to see the available options.
+3. Run `dotnet new dataminer-connector-solution` with the required options along with any other options to create a solution from the template.
 
 ## How to contribute
 
