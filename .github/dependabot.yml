@@ -42,8 +42,7 @@ updates:
       - dependency-name: "Skyline.DataMiner.Sdk"
     groups:
       all-template-dependencies:
-        patterns:
-          - "*"
+        group-by: "dependency-name"
 
   # global.json — tracks the Skyline.DataMiner.Sdk MSBuild SDK version
   - package-ecosystem: "nuget"
@@ -52,3 +51,6 @@ updates:
       - "/"
     schedule:
       interval: "weekly"
+    groups:
+      global-json:
+        group-by: "dependency-name"
