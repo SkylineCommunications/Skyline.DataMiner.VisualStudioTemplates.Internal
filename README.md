@@ -85,8 +85,34 @@ As of version 2.42, DataMiner Integration Studio (DIS) automatically installs th
 
 ## How to contribute
 
-To add additional templates, create a new template and put it under the working/templates folder. For more information about how to create a template, refer to [Custom templates for dotnet new](https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates).
+To add additional templates:
+
+1. Create your new template.
+2. Place it in the `working/templates` folder.
+
+For more details on creating templates, refer to:
+
+- [learn microsoft](https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates)
+
+- [DotNet Templating](https://github.com/dotnet/templating/wiki)
 
 ## License
 
 This project is licensed under the [MIT License](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates/blob/main/LICENSE). See the file for details.
+
+### Testing Locally
+
+1. Open the CLI in the `working` directory.
+2. Pack the project:
+   ```bash
+   dotnet pack
+   ```
+3. Uninstall the current template (if applicable):
+   ```bash
+   dotnet new uninstall skyline.dataminer.visualstudiotemplates.Internal
+   ```
+4. Install the new package:
+   ```bash
+   dotnet new install "bin\Release\Skyline.DataMiner.VisualStudioTemplates.Internal.0.0.1-beta.nupkg"
+   ```
+5. Test the template to ensure it works as expected.
