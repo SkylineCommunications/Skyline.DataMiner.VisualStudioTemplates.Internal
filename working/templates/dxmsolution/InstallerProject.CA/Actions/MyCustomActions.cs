@@ -1,6 +1,3 @@
-using System;
-using System.IO;
-
 using WixToolset.Dtf.WindowsInstaller;
 
 namespace $InstallerName$.CA.Actions
