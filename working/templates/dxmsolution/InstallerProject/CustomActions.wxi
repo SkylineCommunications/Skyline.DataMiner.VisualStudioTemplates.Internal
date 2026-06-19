@@ -1,0 +1,15 @@
+<Include xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="CustomActionComponents" Directory="INSTALLFOLDER">
+			<Component Id="CustomActionFiles" Guid="ae6d4f94-1366-4745-b35e-dc18a67e140a" KeyPath="yes" Bitness="always64"/>
+		</ComponentGroup>
+
+		<Binary Id="CActions" SourceFile="$(var.$InstallerName$.CA.TargetDir)/$(var.$InstallerName$.CA.TargetName).CA.dll" />
+		
+		<CustomAction Id="MyImmediateCustomAction" DllEntry="MyImmediateCustomAction" Execute="immediate" Return="check" Impersonate="no" BinaryRef="CActions"/>
+		<CustomAction Id="RollbackMyDeferredCustomAction" DllEntry="RollbackMyDeferredCustomAction" Execute="rollback" Return="ignore" Impersonate="no" BinaryRef="CActions"/>
+		<CustomAction Id="MyDeferredCustomAction" DllEntry="MyDeferredCustomAction" Execute="deferred" Return="check" Impersonate="no" BinaryRef="CActions"/>
+
+		<CustomAction Id="MyCommitCustomAction" DllEntry="MyCommitCustomAction" Execute="commit" Return="ignore" Impersonate="no" BinaryRef="CActions" />
+	</Fragment>
+</Include>

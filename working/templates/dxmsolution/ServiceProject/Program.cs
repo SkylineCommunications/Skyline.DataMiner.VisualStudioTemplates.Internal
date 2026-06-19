@@ -12,7 +12,7 @@ namespace $ServiceNameFull$
             });
 
             var host = builder.Build();
-            host.Run();;
+            host.Run();
         }
     }
 }

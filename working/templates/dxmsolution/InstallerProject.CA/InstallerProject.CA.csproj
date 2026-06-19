@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<RootNamespace>$InstallerName$.CA</RootNamespace>
+		<AssemblyName>$InstallerName$.CA</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="CustomAction.config" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!--
+		Pin to version 4.0.4, as 4.0.5 and higher have an issue with impersonation of immediate custom actions, which causes them to run under the wrong privileges, and fail to access the temp folder (unless the msi was started from an elevated prompt)
+		https://github.com/wixtoolset/issues/issues/8078
+		https://teams.microsoft.com/l/message/19:e31e8ec3df5341f68a643103f0efc4b9@thread.skype/1713525568332?tenantId=5f175691-8d1c-4932-b7c8-ce990839ac40&groupId=3ccc5562-e346-4a6f-a03a-3db73cf0475e&parentMessageId=1713441137572&teamName=Skyline%20-%20Global&channelName=Bazaar%20%F0%9F%A5%B3&createdTime=1713525568332
+		-->
+		<PackageReference Include="WixToolset.Dtf.CustomAction" Version="[4.0.4]" />
+		<PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="[4.0.4]" />
+
+	</ItemGroup>
+</Project>

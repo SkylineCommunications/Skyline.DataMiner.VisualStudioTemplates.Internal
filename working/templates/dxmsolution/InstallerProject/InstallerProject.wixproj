@@ -1,5 +1,5 @@
-﻿<Project Sdk="WixToolset.Sdk/4.0.5">
-	<Import Project="Sdk.props" Sdk="WixToolset.Sdk" Version="4.0.5"/>
+﻿<Project Sdk="WixToolset.Sdk/4.0.6">
+	<Import Project="Sdk.props" Sdk="WixToolset.Sdk" Version="4.0.6"/>
 	<PropertyGroup>
 		<ProductVersion>1.0.0.0</ProductVersion>
 		<Name>$InstallerName$</Name>
@@ -16,18 +16,26 @@
 		<SuppressPdbOutput>true</SuppressPdbOutput>
 	</PropertyGroup>
 	<ItemGroup>
-		<Content Include="icon.ico"/>
+		<Content Include="CustomActions.wxi" />
 		<Content Include="$DxmModuleName$.wxi"/>
+		<Content Include="InstallExecuteSequence.wxi" />
+		<Content Include="LaunchConditions.wxi" />
+		<Content Include="Resources\Banner.jpg" />
+		<Content Include="Resources\Dialog.jpg" />
+		<Content Include="Resources\icon.ico" />
+		<Content Include="UI.wxi" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="$DxmModuleName$.xslt"/>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="WixToolset.Util.wixext" Version="4.0.5"/>
-		<PackageReference Include="WixToolset.UI.wixext" Version="4.0.5"/>
-		<PackageReference Include="WixToolset.Heat" Version="4.0.5"/>
+		<PackageReference Include="WixToolset.Netfx.wixext" Version="4.0.6" />
+		<PackageReference Include="WixToolset.Util.wixext" Version="4.0.6"/>
+		<PackageReference Include="WixToolset.UI.wixext" Version="4.0.6"/>
+		<PackageReference Include="WixToolset.Heat" Version="4.0.6"/>
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\$InstallerName$.CA\$InstallerName$.CA.csproj" />
 		<ProjectReference Include="..\$ServiceName$\$ServiceName$.csproj">
 			<Name>$ServiceName$</Name>
 			<Project>{43695e16-1dc5-4a55-a915-04e1f7f8dab6}</Project>
@@ -38,7 +46,7 @@
 		</ProjectReference>
 	</ItemGroup>
 	<!-- Make use of harvesting. For more info, refer to: https://wixtoolset.org/docs/tools/heat/ -->
-	<Import Project="Sdk.targets" Sdk="WixToolset.Sdk" Version="4.0.5"/>
+	<Import Project="Sdk.targets" Sdk="WixToolset.Sdk" Version="4.0.6"/>
 	<Target Name="BeforeBuild">
 		<!-- Optional publishing of webApp you actually want to install.-->
 		<!--<Exec Command="dotnet publish $(SolutionDir)Path\To\My\app.csproj -c $(Configuration) -p:PublishProfile=$(Configuration)" />-->
@@ -49,7 +57,7 @@
 			<HarvestDirectorySuppressUniqueIds>false</HarvestDirectorySuppressUniqueIds>
 		</PropertyGroup>
 		<ItemGroup>
-			<HarvestDirectory Include="$(SolutionDir)$ServiceName$/bin/$(Configuration)/net8.0">
+			<HarvestDirectory Include="$(SolutionDir)$ServiceName$/bin/$(Configuration)/net10.0">
 				<!--<PreprocessorVariable>var.publishDir</PreprocessorVariable>-->
 				<Transforms>$(ProjectDir)$DxmModuleName$.xslt</Transforms>
 				<SuppressRegistry>true</SuppressRegistry>
@@ -61,7 +69,7 @@
 			</HarvestDirectory>
 		</ItemGroup>
 		<ItemGroup>
-			<HarvestDirectory Include="$(SolutionDir)$ServiceName$/bin/$(Configuration)/net8.0/runtimes/win">
+			<HarvestDirectory Include="$(SolutionDir)$ServiceName$/bin/$(Configuration)/net10.0/runtimes/win">
 				<SuppressRegistry>true</SuppressRegistry>
 				<SuppressRootDirectory>true</SuppressRootDirectory>
 				<SuppressCom>true</SuppressCom>
@@ -69,7 +77,7 @@
 				<ComponentGroupName>$DxmModuleName$DotNetWinRuntimeComponents</ComponentGroupName>
 				<DirectoryRefId>INSTALLFOLDERRUNTIMESWIN</DirectoryRefId>
 			</HarvestDirectory>
-			<BindPath Include="$(SolutionDir)$ServiceName$/bin/$(Configuration)/net8.0/runtimes/win"/>
+			<BindPath Include="$(SolutionDir)$ServiceName$/bin/$(Configuration)/net10.0/runtimes/win"/>
 		</ItemGroup>
 	</Target>
 </Project>
