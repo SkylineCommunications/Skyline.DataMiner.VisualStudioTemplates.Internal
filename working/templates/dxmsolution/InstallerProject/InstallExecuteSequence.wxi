@@ -1,0 +1,30 @@
+<Include xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+	<InstallExecuteSequence>
+
+		<!--
+		Make sure the immediate action which fetches the properties, and does other preparations for the deferred action, runs before the deferred action.
+		This can be done with the "Before" or "After" attributes. Schedule their location in the sequence according to what the action does, and when it needs to run.
+		See the example sequence in the documentation, and adjust as needed: https://learn.microsoft.com/en-us/windows/win32/msi/suggested-installexecutesequence
+
+		The filled in conditions below is just an example.
+		Note that for the rollback action and the deferred action, their own names are added to the condition.
+		This causes the effect that they only run when the immediate action ran and explicitly set the property with the same name as the action, which is done in the immediate action.
+		-->
+		<Custom Action="MyImmediateCustomAction" After="InstallFiles" Condition='NOT REMOVE'/>
+		<!--
+		Rollback action: this ALWAYS needs to be scheduled before the respective deferred action that it's trying to roll back.
+		This ensures that any failure in the deferred action will trigger the rollback action, and not the other way around.
+		Rollback actions are executed in the reverse order of their scheduling, meaning that if you have multiple deferred actions with their respective rollback actions,
+		the rollback action which corresponds with the last run deferred action will be executed first.
+		-->
+		<Custom Action="RollbackMyDeferredCustomAction" After="MyImmediateCustomAction" Condition='NOT REMOVE And RollbackMyDeferredCustomAction'/>
+		<!-- Deferred action: make changes to the system -->
+		<Custom Action="MyDeferredCustomAction" After="RollbackMyDeferredCustomAction" Condition='NOT REMOVE And MyDeferredCustomAction'/>
+
+		<!--
+		Commit Action: these can also make changes to the system (as they are a special type of deferred action), but they only run if the installation was successful (they run at the end), and will not be rolled back if the installation fails.
+		-->
+		<Custom Action="MyCommitCustomAction" Before="InstallFinalize" Condition="MyCommitCustomAction"/>
+	</InstallExecuteSequence>
+</Include>

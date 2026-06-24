@@ -1,0 +1,13 @@
+<Include xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
+
+	<netfx:DotNetCompatibilityCheck
+		Property="ASPNETCORE_RUNTIME_OK"
+		RuntimeType="aspnet"
+		Version="10.0.0"
+		Platform="x64"
+		RollForward="minor" />
+
+	<Launch
+		Condition='Installed OR ASPNETCORE_RUNTIME_OK = 0'
+		Message="This application requires ASP.NET Core Runtime 10 (x64).&#13;&#10;&#13;&#10;Please install it before continuing: https://dotnet.microsoft.com/download/dotnet/10.0" />
+</Include>

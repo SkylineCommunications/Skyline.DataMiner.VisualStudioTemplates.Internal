@@ -1,0 +1,24 @@
+<Include xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+	<Fragment>
+		<UI Id="WixUI_SkipLicenseAgreement">
+			<ui:WixUI Id="WixUI_InstallDir" />
+			<!--Skip license agreements & install dir dialog-->
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="PrepareDlg" Order="2" Condition="NOT Installed AND NOT PATCH" />
+			<Publish Dialog="PrepareDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2" Condition="NOT Installed AND NOT PATCH" />
+
+            <!--
+            If you would like to insert a custom dialog, change the "Value" in above "publish" tags to the "Id" of your custom dialog
+            The best way to start on a custom dialog is to copy one of the existing WixUI_*.wxs files from the WIX source code, and adjust it to your needs.
+            You can find the source code here: https://github.com/wixtoolset/wix/tree/HEAD/src/ext/UI/wixlib
+
+            If you would like to hide or show some text, buttons,... based on a condition. Use the "HideCondition" and "ShowConditon" attributes on a "control" element.
+
+            If you would like to disable a button until a certain condition is met. Use the "EnableCondition" and "DisableCondition" attributes on a "control" element.
+            The only limitation is that WiX only updates the backing properties after a focus change. For conditions based on the value of radio buttons, checkboxes and comboboxes, this happens immediately,
+            but for input fields, this only happens when the user clicks somewhere else.
+            Instead, don't use those conditions when dealing with input fields, but let the "next" button pop up a custom dialog which shows an error message "Not all required fields are filled in" in case the required fields are not filled in.
+            When all conditions are met, let the "next" button pop up the next dialog in the sequence, which is the normal flow. You can use the "Condition" attribute on the "publish" tag for this.
+            -->
+		</UI>
+	</Fragment>
+</Include>
