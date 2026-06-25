@@ -43,6 +43,19 @@
         ]
       }
     },
+    "RunSolutionScriptsInDedicatedProcess": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Enables running scripts with the same solution ID to run in the same runner process.",
+      "defaultValue": "false"
+    },
+    "SolutionIdGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$SOLUTIONID$",
+      "parameters": {
+      "defaultFormat":"D"
+    },
     "CreateDataMinerPackage": {
       "type": "parameter",
       "datatype": "bool",
@@ -141,6 +154,11 @@
         "*.nuspec",
         "*.nupkg"
       ]
+    },
+	  {
+      "source": "../PackageContent/SolutionAutomationScripts",
+      "target": "./",
+      "condition": "RunSolutionScriptsInDedicatedProcess"
     },
     {
       "source": "../SharedItems/OnSolutionLevel",

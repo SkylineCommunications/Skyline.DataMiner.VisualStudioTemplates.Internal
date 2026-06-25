@@ -5,6 +5,10 @@
       "longName": "author",
       "shortName": "auth"
     },
+    "RunSolutionScriptsInDedicatedProcess":
+    {
+      "longName": "run-solution-scripts-in-dedicated-process"
+    },
     "CreateDataMinerPackage": {
       "longName": "create-dataminer-package"
     },

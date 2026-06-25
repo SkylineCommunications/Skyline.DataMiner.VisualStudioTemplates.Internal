@@ -36,12 +36,16 @@ internal class Script
 			engine.GenerateInformation("Starting installation");
 			var installer = new AppInstaller(Engine.SLNetRaw, context);
 			installer.InstallDefaultContent();
+#if RunSolutionScriptsInDedicatedProcess
+            // Trigger invalidation of any running script runner for automation scripts that have a SolutionId tag.
+			installer.InvalidateScriptRunners();
+#endif
 
-			////string setupContentPath = installer.GetSetupContentDirectory();
+            ////string setupContentPath = installer.GetSetupContentDirectory();
 
-			// Custom installation logic can be added here for each individual install package.
-		}
-		catch (Exception e)
+            // Custom installation logic can be added here for each individual install package.
+        }
+        catch (Exception e)
 		{
 			engine.ExitFail($"Exception encountered during installation: {e}");
 		}

@@ -1,0 +1,5 @@
+<Project>
+	<PropertyGroup>
+		<DataMinerSolutionId>$SOLUTIONID$</DataMinerSolutionId>
+	</PropertyGroup>
+</Project>
