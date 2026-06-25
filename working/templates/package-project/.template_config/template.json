@@ -49,13 +49,6 @@
       "description": "Enables running scripts with the same solution ID to run in the same runner process.",
       "defaultValue": "false"
     },
-    "SolutionIdGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$SOLUTIONID$",
-      "parameters": {
-      "defaultFormat":"D"
-    },
     "CreateDataMinerPackage": {
       "type": "parameter",
       "datatype": "bool",
@@ -92,6 +85,14 @@
       "replaces": "$INITIALVERSIONDATE$",
       "parameters": {
         "format": "dd/MM/yyyy"
+      }
+    },
+    "SolutionIdGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$SOLUTIONID$",
+      "parameters": {
+        "defaultFormat":"D"
       }
     },
     "Namespace": {
@@ -151,14 +152,10 @@
         ".template_config/**",
         "[Content_Types].xml",
         "_rels/**",
+        "PackageContent/SolutionAutomationScripts/**",
         "*.nuspec",
         "*.nupkg"
       ]
-    },
-	  {
-      "source": "../PackageContent/SolutionAutomationScripts",
-      "target": "./",
-      "condition": "RunSolutionScriptsInDedicatedProcess"
     },
     {
       "source": "../SharedItems/OnSolutionLevel",
@@ -179,6 +176,11 @@
       "source": "../SharedItems/Properties",
       "target": "Properties",
       "condition": "CreateDataMinerPackage"
+    },
+    {
+      "source": "PackageContent/SolutionAutomationScripts",
+      "target": "PackageContent/SolutionAutomationScripts",
+      "condition": "RunSolutionScriptsInDedicatedProcess"
     },
     {
       "source": "../SharedItems/.github",
