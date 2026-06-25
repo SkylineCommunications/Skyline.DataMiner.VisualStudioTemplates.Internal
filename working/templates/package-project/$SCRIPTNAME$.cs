@@ -37,7 +37,8 @@ internal class Script
 			var installer = new AppInstaller(Engine.SLNetRaw, context);
 			installer.InstallDefaultContent();
 #if RunSolutionScriptsInDedicatedProcess
-            // Trigger invalidation of any running script runner for automation scripts that have a SolutionId tag.
+
+			// Trigger invalidation of any running script runner for automation scripts that have a SolutionId tag.
 			installer.InvalidateScriptRunners();
 #endif
 
