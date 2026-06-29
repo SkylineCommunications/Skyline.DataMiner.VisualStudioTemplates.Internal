@@ -38,7 +38,8 @@ internal class Script
 			installer.InstallDefaultContent();
 #if RunSolutionScriptsInDedicatedProcess
 
-			// Trigger invalidation of any running script runner for automation scripts that have a SolutionId tag.
+			// Important: Trigger invalidation of any running script runner for automation scripts that have a SolutionId tag.
+			// See section Solution-specific automation scripts in GettingStarted.md for more information.
 			installer.InvalidateScriptRunners();
 #endif
 

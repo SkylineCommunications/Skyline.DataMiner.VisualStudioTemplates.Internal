@@ -87,14 +87,6 @@
         "format": "dd/MM/yyyy"
       }
     },
-    "SolutionIdGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$SOLUTIONID$",
-      "parameters": {
-        "defaultFormat":"D"
-      }
-    },
     "Namespace": {
       "type": "derived",
       "valueSource": "name",
@@ -152,7 +144,6 @@
         ".template_config/**",
         "[Content_Types].xml",
         "_rels/**",
-        "PackageContent/SolutionAutomationScripts/**",
         "*.nuspec",
         "*.nupkg"
       ]
@@ -176,11 +167,6 @@
       "source": "../SharedItems/Properties",
       "target": "Properties",
       "condition": "CreateDataMinerPackage"
-    },
-    {
-      "source": "PackageContent/SolutionAutomationScripts",
-      "target": "PackageContent/SolutionAutomationScripts",
-      "condition": "RunSolutionScriptsInDedicatedProcess"
     },
     {
       "source": "../SharedItems/.github",
