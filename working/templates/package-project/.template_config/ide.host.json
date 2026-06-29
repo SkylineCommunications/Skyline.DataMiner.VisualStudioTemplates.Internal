@@ -11,6 +11,13 @@
       "isVisible": true
     },
     {
+      "id": "RunSolutionScriptsInDedicatedProcess",
+      "name": {
+        "text": "Run solution scripts in dedicated process"
+      },
+      "isVisible": true
+    },
+    {
       "id": "CreateDataMinerPackage",
       "name": {
         "text": "Create DataMiner Package"
