@@ -289,3 +289,44 @@ Please consider the following options:
 - If Catalog publishing is not required, review your project setup to ensure it aligns with your goals.
 
 <!--#endif-->
+
+<!--#if (RunSolutionScriptsInDedicatedProcess)-->
+## Solution-specific automation scripts
+
+Automation scripts that should run in the same runner should have the same solution DataMiner solution ID.
+
+There are two ways to specify a DataMiner solution ID on a project:
+
+- Define a DataMinerSolutionId property in the .csproj file of the automation script project.
+- Define a DataMinerSolutionId property in a Directory.Build.props file and put the file in a directory where the automation scripts belonging to the same solution will be put. Automation scripts that are placed in that directory (or in a subdirectory thereof) will inherit the solution ID from the Directory.Build.props file.
+
+```xml
+<PropertyGroup>
+	<DataMinerSolutionId>91038532-5581-4062-A2CD-952ACACD6E8C</DataMinerSolutionId>
+</PropertyGroup>
+```
+
+When the package is created, automation scripts for which a DataMiner solution ID was specified will have a `<SolutionId>` tag in the automation script XML.
+
+### Install script
+
+Automation scripts that have a `<SolutionId>` tag run in a dedicated runner process in DataMiner. When a package that contains such automation scripts is installed, the installer must notify DataMiner that it should invalidate any previously running runners.
+
+This can be done by calling the following method:
+
+```C#
+installer.InvalidateScriptRunners();
+```
+
+Note: It is important to first call either `installer.InstallAutomationScripts()` or `installer.InstallDefaultContent()` (which calls `installer.InstallAutomationScripts()`) before invoking `installer.InvalidateScriptRunners()`. This is because `installer.InstallAutomationScripts()` will keep track of the solution IDs while installing the automation script.
+
+Custom operations can be performed, if needed, between calling `installer.InstallDefaultContent()` (or `installer.InstallAutomationScripts()`) and `installer.InvalidateScriptRunners()`.
+
+### Additional notes
+
+- An install script should not have a solution ID, as this script runs in SLAutomation and not in a dedicated runner.
+- Do not reuse a script that is compiled as a library in both the install script and an automation script that runs in a dedicated runner.
+- A solution ID must be unique. It is recommended to use a GUID.
+- A script can only be part of a single solution.
+
+<!--#endif-->
