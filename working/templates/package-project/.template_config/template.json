@@ -43,6 +43,12 @@
         ]
       }
     },
+    "RunSolutionScriptsInDedicatedProcess": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Enables running scripts with the same solution ID to run in the same runner process.",
+      "defaultValue": "false"
+    },
     "CreateDataMinerPackage": {
       "type": "parameter",
       "datatype": "bool",

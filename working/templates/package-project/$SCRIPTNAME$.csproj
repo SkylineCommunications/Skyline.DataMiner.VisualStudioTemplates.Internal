@@ -7,8 +7,13 @@
 	<PropertyGroup>
 		<DataMinerType>Package</DataMinerType>
 		<GenerateDataMinerPackage>$CREATEPACKAGE$</GenerateDataMinerPackage>
+<!--#if (RunSolutionScriptsInDedicatedProcess)-->
+		<MinimumRequiredDmVersion>10.6.9.0 - 17534</MinimumRequiredDmVersion>
+		<!-- <MinimumRequiredDmWebVersion>10.6.9 (CU0)</MinimumRequiredDmWebVersion> -->
+<!--#else-->
 		<MinimumRequiredDmVersion>10.4.0.0 - 14003</MinimumRequiredDmVersion>
 		<!-- <MinimumRequiredDmWebVersion>10.6.2 (CU0)</MinimumRequiredDmWebVersion> -->
+<!--#endif-->
 		<Version>1.0.0</Version>
 		<VersionComment>Initial Version</VersionComment>
 <!--#if (CreateDataMinerPackage)-->
@@ -20,7 +25,11 @@
 
 	<ItemGroup>
 		<PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller" Version="4.2.0" />
+<!--#if (RunSolutionScriptsInDedicatedProcess)-->	
+		<PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.6.9.1" />
+<!--#else-->
 		<PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.4.0.24" />
+<!--#endif-->
 	</ItemGroup>
 
 	<ItemGroup>
