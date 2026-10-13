@@ -1,0 +1,9 @@
+<Project Sdk="Skyline.DataMiner.Sdk.Intelligence">
+    <PropertyGroup>
+        <DataMinerType>Intelligence</DataMinerType>
+        <GenerateDataMinerPackage>False</GenerateDataMinerPackage>
+        <MinimumRequiredDmVersion>10.6.11.0 - 17692</MinimumRequiredDmVersion>
+        <Version>1.0.0</Version>
+        <VersionComment>Initial Version</VersionComment>
+    </PropertyGroup>
+</Project>
