@@ -1,6 +1,6 @@
 ---
 version: 1.0.0
-schema-version: 1.0
+schema-version: $SCHEMAVERSION$
 name: example-script-tool
 description: Example Intelligence script
 scriptName: example-script

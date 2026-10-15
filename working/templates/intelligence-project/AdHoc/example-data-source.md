@@ -1,6 +1,6 @@
 ---
 version: 1.0.0
-schema-version: 1.0
+schema-version: $SCHEMAVERSION$
 name: example-data-source
 description: Example Intelligence data source
 dataSource: '{"DataSourceInterface":"Skyline.DataMiner.Analytics.GenericInterface.IGQIDataSource","ScriptName":"example-script","LibraryName":"ExampleLibrary","TypeFullName":"ExampleNamespace.ExampleDataSource","TypeName":"ExampleDataSource"}'

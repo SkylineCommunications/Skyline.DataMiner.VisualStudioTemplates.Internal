@@ -1,8 +1,14 @@
 {
   "$schema": "http://json.schemastore.org/dotnetcli.host",
   "symbolInfo": {
-    "ProjectName": {
-      "longName": "name"
+    "SchemaVersion": {
+      "longName": "schema-version"
+    },
+    "CreateDataMinerPackage": {
+      "longName": "create-dataminer-package"
+    },
+    "IncludeGitHubWorkflow": {
+      "longname": "include-github-workflow"
     }
   }
 }
