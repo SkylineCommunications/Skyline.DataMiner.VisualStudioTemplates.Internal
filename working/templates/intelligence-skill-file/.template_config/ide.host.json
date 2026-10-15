@@ -15,6 +15,13 @@
         "text": "Version"
       },
       "isVisible": true
+    },
+    {
+      "id": "SchemaVersion",
+      "name": {
+        "text": "Schema Version"
+      },
+      "isVisible": true
     }
   ]
 }
