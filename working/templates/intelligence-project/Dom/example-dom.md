@@ -1,10 +1,10 @@
 ---
 version: 1.0.0
-schema-version: 1.0
+schema-version: $SCHEMAVERSION$
 name: example-dom
 description: Example Intelligence DOM definition
 module: example-module
-definition: example-definition
+definition: 00000000-0000-0000-0000-000000000000
 columns:
 - name: Name
   type: string
