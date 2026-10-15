@@ -1,7 +1,7 @@
 ---
 id: $AGENTID$
 version: $VERSION$
-schema-version: 1.0
+schema-version: $SCHEMAVERSION$
 name: $name$
 description: $DESCRIPTION$
 ---

@@ -1,6 +1,6 @@
 ---
 version: $VERSION$
-schema-version: 1.0
+schema-version: $SCHEMAVERSION$
 name: $DATASOURCETOOLNAME$
 description: $DESCRIPTION$
 dataSource: '{"DataSourceInterface":"Skyline.DataMiner.Analytics.GenericInterface.IGQIDataSource","ScriptName":"$SCRIPTNAME$","LibraryName":"$LIBRARYNAME$","TypeFullName":"$TYPEFULLNAME$","TypeName":"$TYPENAME$"}'

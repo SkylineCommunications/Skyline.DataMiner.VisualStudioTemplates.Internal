@@ -1,6 +1,6 @@
 ---
 version: $VERSION$
-schema-version: 1.0
+schema-version: $SCHEMAVERSION$
 name: $SCRIPTTOOLNAME$
 description: $DESCRIPTION$
 scriptName: $SCRIPTNAME$
