@@ -10,13 +10,45 @@ The following section lists the currently available Visual Studio templates.
 
 Template that creates a new connector Visual Studio solution.
 
-### Automation Script project
+Short name: `dataminer-connector-solution`
 
-Visual Studio template that creates a new DataMiner Automation Script project.
+### Automation script project
 
-### Automation Script Library project
+Template that creates a new Automation script Visual Studio project.
 
-Visual Studio template that creates a new DataMiner Automation Script library project.
+Short name: `dataminer-automation-project`
+
+### Automation script library project
+
+Template that creates a new Automation script library Visual Studio project.
+
+Short name: `dataminer-automation-library-project`
+
+### User-defined API project
+
+Template that creates a new User-Defined API Visual Studio project.
+
+Short name: `dataminer-user-defined-api-project`
+
+### GQI ad hoc data source project
+
+Template that creates a new GQI ad hoc data source Visual Studio project.
+
+Short name: `dataminer-gqi-ad-hoc-data-source-project`
+
+### Package project
+
+Template that creates a new DataMiner package Visual Studio project.
+
+Short name: `dataminer-package-project`
+
+### Test package project
+
+Template that creates a new DataMiner test package Visual Studio project.
+
+Short name: `dataminer-test-package-project`
+
+## Available templates for Internal
 
 ### BPA solution
 
@@ -25,10 +57,6 @@ Visual Studio template that creates a new DataMiner Best Practices Analyzer (BPA
 ### DataMiner Extension Module solution
 
 Visual Studio template that creates a new DataMiner Extension Module (DxM) solution.
-
-### Ad Hoc Data Source project
-
-Visual Studio template that creates a new DataMiner GQI ad hoc data source project.
 
 ### NuGet solution
 
@@ -45,18 +73,6 @@ Visual Studio template that creates a Solution containing pre-filled meta-data t
 ### .NET Tool project
 
 Visual Studio template that creates a Project containing pre-filled meta-data to handle .NET Tool creation.
-
-### Package project
-
-Visual Studio template that creates a new DataMiner package project.
-
-### Test Package project
-
-Visual Studio template that creates a new DataMiner test package project.
-
-### User-Defined API project
-
-Visual Studio template that creates a new DataMiner User-Defined API project.
 
 ## How to install
 
