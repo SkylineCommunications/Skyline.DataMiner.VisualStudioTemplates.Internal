@@ -5,7 +5,7 @@
     "DataMiner"
   ],
   "tags": {
-    "language": "Markdown",
+    "language": "C#",
     "type": "item"
   },
   "identity": "Skyline.DataMiner.Intelligence.DataSource.File.Template",
@@ -119,5 +119,11 @@
       "replaces": "$TYPENAME$",
       "description": "The name of the data source class."
     }
-  }
+  },
+  "sources": [
+    {
+      "exclude": [
+        ".template_config/**",
+      ]
+    }]
 }

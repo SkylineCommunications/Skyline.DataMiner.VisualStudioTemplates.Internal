@@ -5,7 +5,7 @@
     "DataMiner"
   ],
   "tags": {
-    "language": "Markdown",
+    "language": "C#",
     "type": "item"
   },
   "identity": "Skyline.DataMiner.Intelligence.Dom.File.Template",
@@ -105,5 +105,11 @@
       "replaces": "$DOMDEFINITION$",
       "description": "The DOM definition identifier."
     }
-  }
+  },
+  "sources": [
+    {
+      "exclude": [
+        ".template_config/**",
+      ]
+    }]
 }

@@ -44,5 +44,7 @@
       },
       "isVisible": true
     }
-  ]
+  ],
+  "defaultItemExtension": "md",
+  "itemHierarchyPaths": [ "DataMiner\\Intelligence" ]
 }

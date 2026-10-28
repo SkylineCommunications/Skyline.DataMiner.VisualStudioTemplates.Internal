@@ -5,7 +5,7 @@
     "DataMiner"
   ],
   "tags": {
-    "language": "Markdown",
+    "language": "C#",
     "type": "item"
   },
   "identity": "Skyline.DataMiner.Intelligence.Skill.File.Template",
@@ -91,5 +91,11 @@
       "replaces": "$DESCRIPTION$",
       "description": "A required description for the skill."
     }
-  }
+  },
+  "sources": [
+    {
+      "exclude": [
+        ".template_config/**",
+      ]
+    }]
 }

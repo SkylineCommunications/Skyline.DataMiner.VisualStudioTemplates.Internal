@@ -5,7 +5,7 @@
     "DataMiner"
   ],
   "tags": {
-    "language": "Markdown",
+    "language": "C#",
     "type": "item"
   },
   "identity": "Skyline.DataMiner.Intelligence.Agent.File.Template",
@@ -87,5 +87,11 @@
       "pattern": "([\\-_\\.\\ ])",
       "replacement": ""
     }
-  }
+  },
+  "sources": [
+    {
+      "exclude": [
+        ".template_config/**",
+      ]
+    }]
 }
