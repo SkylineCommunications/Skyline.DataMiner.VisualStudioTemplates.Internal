@@ -13,6 +13,7 @@
   "shortName": "dataminer-intelligence-project",
   "defaultName": "MyIntelligenceProject",
   "sourceName": "$PROJECTNAME$",
+  "placeholderFilename": "-.-",
   "symbols": {
     "ProjectName": {
       "type": "parameter",
