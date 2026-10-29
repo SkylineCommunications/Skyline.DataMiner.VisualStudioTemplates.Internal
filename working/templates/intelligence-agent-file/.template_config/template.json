@@ -13,24 +13,10 @@
   "shortName": "dataminer-intelligence-agent-file",
   "defaultName": "my-agent",
   "sourceName": "$name$",
+  "guids": [
+    "d56116a2-b8e2-479c-93c2-731657d1ab2c"
+  ],
   "symbols": {
-    "AgentId": {
-      "type": "generated",
-      "generator": "guid",
-      "parameters": {
-        "defaultFormat": "D"
-      }
-    },
-    "AgentIdLower": {
-      "type": "generated",
-      "generator": "casing",
-      "dataType": "string",
-      "replaces": "$AGENTID$",
-      "parameters": {
-        "source": "AgentId",
-        "toLower": true
-      }
-    },
     "SchemaVersion": {
       "type": "parameter",
       "datatype": "choice",
@@ -91,7 +77,8 @@
   "sources": [
     {
       "exclude": [
-        ".template_config/**",
+        ".template_config/**"
       ]
-    }]
+    }
+  ]
 }

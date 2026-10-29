@@ -109,7 +109,8 @@
   "sources": [
     {
       "exclude": [
-        ".template_config/**",
+        ".template_config/**"
       ]
-    }]
+    }
+  ]
 }
