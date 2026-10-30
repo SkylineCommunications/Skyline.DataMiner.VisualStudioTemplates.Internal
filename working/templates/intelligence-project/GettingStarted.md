@@ -6,7 +6,7 @@ This project is ready for you to add DataMiner Intelligence artifacts.
 
 ### Using Visual Studio
 
-1. Right-click the project node in Solution Explorer.
+1. Right-click the correct folder node in Solution Explorer.
 2. Select **Add** > **New Item**.
 3. Select the appropriate DataMiner Intelligence template.
 4. Enter the artifact name and select **Add**.
