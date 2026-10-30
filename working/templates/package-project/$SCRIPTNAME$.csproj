@@ -24,7 +24,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller" Version="4.3.0" />
+		<PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller" Version="4.4.0" />
 <!--#if (RunSolutionScriptsInDedicatedProcess)-->	
 		<PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.6.9.1" />
 <!--#else-->
