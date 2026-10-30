@@ -120,6 +120,18 @@ For more details on creating templates, refer to:
 
 - [DotNet Templating](https://github.com/dotnet/templating/wiki)
 
+### Copy a PR to the Public templates repository
+
+Both template repositories are publicly accessible. "Public" refers to `Skyline.DataMiner.VisualStudioTemplates`, whose templates are intended for external users; "Internal" refers to `Skyline.DataMiner.VisualStudioTemplates.Internal`, whose templates are intended for Skyline employees. These labels describe the intended audience, not repository visibility.
+
+Maintainers can run the **Copy PR to Public templates** workflow from the Actions tab on this repository's default branch. Enter the Internal source PR number; the workflow applies that PR's file changes to a new branch based on `Skyline.DataMiner.VisualStudioTemplates`'s `main` and opens a Public PR for review. It does not merge the PR or copy unrelated source files. Confirm that all changes in the selected PR are suitable for external users before running the workflow.
+
+Configure an Actions secret named `VS_TEMPLATES_REPO_TOKEN` in both template repositories (or share an organization secret with both). Use a single fine-grained **personal access token** scoped to `Skyline.DataMiner.VisualStudioTemplates` and `Skyline.DataMiner.VisualStudioTemplates.Internal`, with **Contents: Read and write**, **Pull requests: Read and write**, and **Agent tasks: Read and write** permissions. Also grant **Workflows: Read and write** when copying changes to GitHub Actions workflow files. The token's owner must be able to push branches, create PRs, and use Copilot cloud agent in both repositories. GitHub App installation tokens do not support the Copilot agent tasks API.
+
+If applying the source PR's patch fails (for example, because of a conflict), the workflow instead starts a Copilot cloud-agent task in Public to apply the changes and create a PR. The task includes the exact source patch to identify the selected PR's changes. The workflow summary links to the task; Copilot works asynchronously, so the PR may appear later and must be reviewed for suitability for external users and Public-specific adaptations. The workflow still fails without invoking Copilot if the changes are already present or if a checkout, push, or GitHub API call fails. The agent tasks API is in public preview and can change.
+
+For the reverse direction, run **Copy PR to Internal templates** in `Skyline.DataMiner.VisualStudioTemplates` with a Public PR number. It uses the same `VS_TEMPLATES_REPO_TOKEN` secret.
+
 ## License
 
 This project is licensed under the [MIT License](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates/blob/main/LICENSE). See the file for details.
