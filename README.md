@@ -6,49 +6,49 @@ This repository contains DataMiner templates that can be used with Visual Studio
 
 The following section lists the currently available templates.
 
-### DataMiner Connector Solution
+### Connector Solution
 
 Template that creates a new connector Visual Studio solution.
 
 Short name: `dataminer-connector-solution`
 
-### DataMiner Automation Script Project
+### Automation Script Project
 
 Template that creates a new Automation script Visual Studio project.
 
 Short name: `dataminer-automation-project`
 
-### DataMiner Automation Script Library Project
+### Automation Script Library Project
 
 Template that creates a new Automation script library Visual Studio project.
 
 Short name: `dataminer-automation-library-project`
 
-### DataMiner User-Defined API Project
+### User-Defined API Project
 
 Template that creates a new User-Defined API Visual Studio project.
 
 Short name: `dataminer-user-defined-api-project`
 
-### DataMiner Ad Hoc Data Source Project
+### Ad Hoc Data Source Project
 
 Template that creates a new GQI ad hoc data source Visual Studio project.
 
 Short name: `dataminer-gqi-ad-hoc-data-source-project`
 
-### DataMiner Package Project
+### Package Project
 
 Template that creates a new DataMiner package Visual Studio project.
 
 Short name: `dataminer-package-project`
 
-### DataMiner Test Package Project
+### Test Package Project
 
 Template that creates a new DataMiner test package Visual Studio project.
 
 Short name: `dataminer-test-package-project`
 
-### DataMiner Web Application Project
+### Web Application Project
 
 Template that creates a new DataMiner web application project (`.esproj`): a static web site that fully runs in the browser, with an `App.info.json` manifest. Include it in a package project to deploy it.
 
