@@ -48,35 +48,55 @@ Template that creates a new DataMiner test package Visual Studio project.
 
 Short name: `dataminer-test-package-project`
 
+### Web application project
+
+Template that creates a new DataMiner web application project (`.esproj`): a static web site that fully runs in the browser, with an `App.info.json` manifest. Include it in a package project to deploy it.
+
+Language: JavaScript
+
+Short name: `dataminer-web-application-project`
+
 ## Available templates for Internal
 
 ### BPA solution
 
-Visual Studio template that creates a new DataMiner Best Practices Analyzer (BPA) solution.
+Template that creates a new DataMiner Best Practices Analyzer (BPA) solution.
+
+Short name: `dataminer-bpa-solution`
 
 ### DataMiner Extension Module solution
 
-Visual Studio template that creates a new DataMiner Extension Module (DxM) solution.
+Template that creates a new DataMiner Extension Module (DxM) solution.
 
-### NuGet solution
-
-Visual Studio template that creates a Solution containing pre-filled meta-data to handle NuGet creation.
-
-### NuGet project
-
-Visual Studio template that creates a Project containing pre-filled meta-data to handle NuGet creation.
+Short name: `dataminer-dxm-solution`
 
 ### .NET Tool solution
 
-Visual Studio template that creates a Solution containing pre-filled meta-data to handle .NET Tool creation.
+Template that creates a solution containing pre-filled metadata to handle .NET Tool creation.
+
+Short name: `dataminer-dotnettool-solution`
 
 ### .NET Tool project
 
-Visual Studio template that creates a Project containing pre-filled meta-data to handle .NET Tool creation.
+Template that creates a project containing pre-filled metadata to handle .NET Tool creation.
+
+Short name: `dataminer-dotnettool-project`
+
+### NuGet solution
+
+Template that creates a solution containing pre-filled metadata to handle NuGet package creation.
+
+Short name: `dataminer-nuget-solution`
+
+### NuGet project
+
+Template that creates a project containing pre-filled metadata to handle NuGet package creation.
+
+Short name: `dataminer-nuget-project`
 
 ### Scripted connector project
 
-Creates a Python based connector script project.
+Template that creates a Python-based connector script project.
 
 Language: Python
 
