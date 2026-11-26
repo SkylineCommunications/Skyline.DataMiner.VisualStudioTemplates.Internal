@@ -44,6 +44,7 @@ updates:
       - dependency-name: "Skyline.DataMiner.Dev.*"
       # Skyline.DataMiner.Sdk is managed separately via global.json (see entry below)
       - dependency-name: "Skyline.DataMiner.Sdk"
+      - dependency-name: "Skyline.DataMiner.Sdk.*"
     patterns:
       - "Skyline.*"
     multi-ecosystem-group: "all-template-dependencies"
@@ -55,4 +56,5 @@ updates:
       - "/"
     patterns:
       - "Skyline.DataMiner.Sdk"
+      - "Skyline.DataMiner.Sdk.*"
     multi-ecosystem-group: "all-template-dependencies"
