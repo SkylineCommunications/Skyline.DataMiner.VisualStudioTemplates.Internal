@@ -6,113 +6,133 @@ This repository contains DataMiner templates that can be used with Visual Studio
 
 The following section lists the currently available templates.
 
-### Connector solution
+### DataMiner Connector Solution
 
 Template that creates a new connector Visual Studio solution.
 
 Short name: `dataminer-connector-solution`
 
-### Automation script project
+### DataMiner Automation Script Project
 
 Template that creates a new Automation script Visual Studio project.
 
 Short name: `dataminer-automation-project`
 
-### Automation script library project
+### DataMiner Automation Script Library Project
 
 Template that creates a new Automation script library Visual Studio project.
 
 Short name: `dataminer-automation-library-project`
 
-### User-defined API project
+### DataMiner User-Defined API Project
 
 Template that creates a new User-Defined API Visual Studio project.
 
 Short name: `dataminer-user-defined-api-project`
 
-### GQI ad hoc data source project
+### DataMiner Ad Hoc Data Source Project
 
 Template that creates a new GQI ad hoc data source Visual Studio project.
 
 Short name: `dataminer-gqi-ad-hoc-data-source-project`
 
-### Package project
+### DataMiner Package Project
 
 Template that creates a new DataMiner package Visual Studio project.
 
 Short name: `dataminer-package-project`
 
-### Test package project
+### DataMiner Test Package Project
 
 Template that creates a new DataMiner test package Visual Studio project.
 
 Short name: `dataminer-test-package-project`
 
-## Available templates for Internal
+### DataMiner Web Application Project
 
-### BPA solution
+Template that creates a new DataMiner web application project (`.esproj`): a static web site that fully runs in the browser, with an `App.info.json` manifest. Include it in a package project to deploy it.
 
-Visual Studio template that creates a new DataMiner Best Practices Analyzer (BPA) solution.
+Language: JavaScript
 
-### DataMiner Extension Module solution
+Short name: `dataminer-web-application-project`
 
-Visual Studio template that creates a new DataMiner Extension Module (DxM) solution.
+### Internal templates
 
-### NuGet solution
+#### DataMiner BPA Solution
 
-Visual Studio template that creates a Solution containing pre-filled meta-data to handle NuGet creation.
+Template that creates a new DataMiner Best Practices Analyzer (BPA) solution.
 
-### NuGet project
+Short name: `dataminer-bpa-solution`
 
-Visual Studio template that creates a Project containing pre-filled meta-data to handle NuGet creation.
+#### DataMiner Extension Module Solution
 
-### .NET Tool solution
+Template that creates a new DataMiner Extension Module (DxM) solution.
 
-Visual Studio template that creates a Solution containing pre-filled meta-data to handle .NET Tool creation.
+Short name: `dataminer-dxm-solution`
 
-### .NET Tool project
+#### DataMiner DotNet Tool Solution
 
-Visual Studio template that creates a Project containing pre-filled meta-data to handle .NET Tool creation.
+Template that creates a solution containing pre-filled metadata to handle .NET Tool creation.
 
-### Scripted connector project
+Short name: `dataminer-dotnettool-solution`
 
-Creates a Python based connector script project.
+#### DataMiner DotNet Tool Project
+
+Template that creates a project containing pre-filled metadata to handle .NET Tool creation.
+
+Short name: `dataminer-dotnettool-project`
+
+#### DataMiner NuGet Package Solution
+
+Template that creates a solution containing pre-filled metadata to handle NuGet package creation.
+
+Short name: `dataminer-nuget-solution`
+
+#### DataMiner NuGet Package Project
+
+Template that creates a project containing pre-filled metadata to handle NuGet package creation.
+
+Short name: `dataminer-nuget-project`
+
+#### DataMiner Connector Script
+
+Template that creates a Python-based connector script project.
 
 Language: Python
 
 Short name: `dataminer-connector-script`
 
-### Intelligence project
+#### DataMiner Intelligence Project
 
 Template that creates a new DataMiner Intelligence project.
 
 Short name: `dataminer-intelligence-project`
 
-### Intelligence agent file
+#### DataMiner Intelligence Agent File
 
 Template that creates a new DataMiner Intelligence agent file.
 
 Short name: `dataminer-intelligence-agent-file`
 
-### Intelligence data source file
+#### DataMiner Intelligence Data Source File
 
 Template that creates a new DataMiner Intelligence data source file.
 
 Short name: `dataminer-intelligence-data-source-file`
 
-### Intelligence DOM file
+#### DataMiner Intelligence DOM File
 
 Template that creates a new DataMiner Intelligence DOM file.
 
 Short name: `dataminer-intelligence-dom-file`
 
-### Intelligence script file
+#### DataMiner Intelligence Script File
 
 Template that creates a new DataMiner Intelligence script file.
 
 Short name: `dataminer-intelligence-script-file`
 
-### Intelligence skill file
+#### DataMiner Intelligence Skill File
 
 Template that creates a new DataMiner Intelligence skill file.
 
