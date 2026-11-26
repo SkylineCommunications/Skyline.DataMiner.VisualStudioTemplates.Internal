@@ -56,45 +56,45 @@ Language: JavaScript
 
 Short name: `dataminer-web-application-project`
 
-### Internal templates
+## Available templates for Internal
 
-#### DataMiner BPA Solution
+### BPA solution
 
 Template that creates a new DataMiner Best Practices Analyzer (BPA) solution.
 
 Short name: `dataminer-bpa-solution`
 
-#### DataMiner Extension Module Solution
+### DataMiner Extension Module solution
 
 Template that creates a new DataMiner Extension Module (DxM) solution.
 
 Short name: `dataminer-dxm-solution`
 
-#### DataMiner DotNet Tool Solution
+### .NET Tool solution
 
 Template that creates a solution containing pre-filled metadata to handle .NET Tool creation.
 
 Short name: `dataminer-dotnettool-solution`
 
-#### DataMiner DotNet Tool Project
+### .NET Tool project
 
 Template that creates a project containing pre-filled metadata to handle .NET Tool creation.
 
 Short name: `dataminer-dotnettool-project`
 
-#### DataMiner NuGet Package Solution
+### NuGet solution
 
 Template that creates a solution containing pre-filled metadata to handle NuGet package creation.
 
 Short name: `dataminer-nuget-solution`
 
-#### DataMiner NuGet Package Project
+### NuGet project
 
 Template that creates a project containing pre-filled metadata to handle NuGet package creation.
 
 Short name: `dataminer-nuget-project`
 
-#### DataMiner Connector Script
+### Scripted connector project
 
 Template that creates a Python-based connector script project.
 
@@ -102,37 +102,37 @@ Language: Python
 
 Short name: `dataminer-connector-script`
 
-#### DataMiner Intelligence Project
+### Intelligence project
 
 Template that creates a new DataMiner Intelligence project.
 
 Short name: `dataminer-intelligence-project`
 
-#### DataMiner Intelligence Agent File
+### Intelligence agent file
 
 Template that creates a new DataMiner Intelligence agent file.
 
 Short name: `dataminer-intelligence-agent-file`
 
-#### DataMiner Intelligence Data Source File
+### Intelligence data source file
 
 Template that creates a new DataMiner Intelligence data source file.
 
 Short name: `dataminer-intelligence-data-source-file`
 
-#### DataMiner Intelligence DOM File
+### Intelligence DOM file
 
 Template that creates a new DataMiner Intelligence DOM file.
 
 Short name: `dataminer-intelligence-dom-file`
 
-#### DataMiner Intelligence Script File
+### Intelligence script file
 
 Template that creates a new DataMiner Intelligence script file.
 
 Short name: `dataminer-intelligence-script-file`
 
-#### DataMiner Intelligence Skill File
+### Intelligence skill file
 
 Template that creates a new DataMiner Intelligence skill file.
 
